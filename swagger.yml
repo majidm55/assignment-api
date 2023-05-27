@@ -1,0 +1,42 @@
+
+openapi: 3.0.0
+info:
+  title: "RP Flask REST API"
+  description: "An API about content engagement"
+  version: "1.0.0"
+servers:
+  - url: "/api"
+
+components:
+  schemas:
+    Report:
+      type: "object"
+      required:
+        - contentId
+        - engagementTime
+        - title
+        - url
+        - thumbnail
+      properties:
+        contentId:
+          type: "number"
+        engagementTime:
+          type: "string"
+        title:
+          type: "string"
+        url:
+          type: "string"
+          format: "uri"
+        thumbnail:
+          type: "string"
+          format: "uri"
+paths:
+  /generateReport:
+    get:
+      operationId: getData.getAllData
+      tags:
+        - "Report"
+      summary: "Create the engagement report"
+      responses:
+        "200":
+          description: "Successfully compiled engagement report"

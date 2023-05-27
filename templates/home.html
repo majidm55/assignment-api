@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RP Flask REST API</title>
+</head>
+<body>
+    <h1>
+        Hello, World!
+    </h1>
+    <ul>
+        {% for c in content  %}
+        <li>{{c.id}} - {{ c.title }} - {{ c.url }} -  {{c.thumbnail}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
