@@ -10,7 +10,8 @@
     </h1>
     <ul>
         {% for c in content  %}
-        <li>{{c.id}} - {{ c.title }} - {{ c.url }} -  {{c.thumbnail}}</li>
+        <li>{{c.id}} - {{ c.title }} - {{ c.url }} -  {{c.thumbnail}} - {{c.total_engagement_time}}</li>
+        <!-- <li>{{c.id}} --  TOTAL total_engagement_time - {{c.total_engagement_time}}</li> -->
         {% endfor %}
     </ul>
 </body>

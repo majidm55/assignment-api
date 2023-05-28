@@ -5,10 +5,9 @@ from os.path import dirname, abspath
 app_path = dirname(dirname(abspath(__file__)))
 sys.path.append(app_path)
 
-from sqlalchemy import create_engine, Column, DateTime, Integer, String, Text, text
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine, Table, Column, DateTime, Integer, String, Text, text
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, declarative_base
 
 # Create an engine to connect to your database
 
