@@ -1,4 +1,4 @@
-contentEngagement = [
+Engagement = [
   {
     "content_id": "1",
     "engagement_time": "54"
@@ -400,6 +400,3 @@ contentEngagement = [
     "engagement_time": "24"
   }
 ]
-
-def readAll():
-    return (contentEngagement)

@@ -33,7 +33,7 @@ components:
 paths:
   /generateReport:
     get:
-      operationId: getData.getAllData
+      operationId: handlers.getAllData
       tags:
         - "Report"
       summary: "Create the engagement report"

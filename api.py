@@ -1,13 +1,10 @@
 from flask import render_template
 import config
-# from handlers.getData import getAllData
-from content import Content
-from getData import getAllData
+from handlers import getAllData
 
 app = config.connex_app
-print("STUCK HERE ------------------------------------------------------*************************>")
 app.add_api(config.basedir / "swagger.yml")
-print("STUCK HERE 222222222 --------->")
+
 @app.route("/")
 def home():
   content = getAllData()
