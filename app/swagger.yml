@@ -13,14 +13,14 @@ components:
       type: "object"
       required:
         - contentId
-        - engagementTime
+        - totalEngagementTime
         - title
         - url
         - thumbnail
       properties:
         contentId:
           type: "number"
-        engagementTime:
+        totalEngagementTime:
           type: "string"
         title:
           type: "string"
@@ -33,7 +33,7 @@ components:
 paths:
   /generateReport:
     get:
-      operationId: handlers.getAllData
+      operationId: handlers.contentHandlers.getAllData
       tags:
         - "Report"
       summary: "Create the engagement report"
