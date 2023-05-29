@@ -1,20 +1,7 @@
-import sys
-from os.path import dirname, abspath
-
-# Add the 'app' directory to the system path
-app_path = dirname(dirname(abspath(__file__)))
-sys.path.append(app_path)
-
-from datetime import datetime
 from config import db, ma
 
-from datetime import datetime
-from sqlalchemy import func, Column, DateTime, ForeignKey, Integer, String, Text
-from sqlalchemy import create_engine
-from sqlalchemy.orm import declarative_base, sessionmaker, relationship
+from sqlalchemy import func, Column, ForeignKey, Integer
 from sqlalchemy.ext.hybrid import hybrid_property
-
-import app.globals.raw_content as rawData
 
 class Content(db.Model):
     __tablename__ = "contents"
@@ -22,9 +9,7 @@ class Content(db.Model):
     title = db.Column(db.String(250))
     url = db.Column(db.Text)
     thumbnail = db.Column(db.Text)
-    timestamp = db.Column(
-        db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow
-    )
+
     @hybrid_property
     def total_engagement_time(self):
         return db.session.query(func.sum(ContentEngagement.engagement_time)).filter(ContentEngagement.content_id == self.id).scalar()
@@ -57,19 +42,3 @@ contents_schema = ContentSchema(many=True)
 
 content_engagement = ContentEngagamentSchema()
 all_engagements = ContentEngagamentSchema(many=True)
-
-
-# engine = create_engine('sqlite:///content_management.db')
-# Base = declarative_base()
-# Base.metadata.create_all(bind=engine)
-
-# Session = sessionmaker(bind=engine)
-# session = Session()
-
-# ContentEngagement.__table__.create(bind=engine, checkfirst=True)
-
-# for data in rawData.Engagement:
-#     engagement = ContentEngagement(data["content_id"], data["engagement_time"])
-#     session.add(engagement)
-
-# session.commit()
