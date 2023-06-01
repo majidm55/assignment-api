@@ -33,7 +33,7 @@ This is a Flask project built using Flask framework and several additional libra
 ## Usage
 
 1. Run the Flask application: `python app/assignment-api.py`
-2. Open your web browser and go to `http://localhost:8000` to access the API which will also print the database in an html format.
+2. Open your web browser and go to `http://localhost:8000` to access the API which will also print the database content table.
 
 ## Project Structure
 
