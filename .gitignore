@@ -29,8 +29,7 @@ MANIFEST
 .DS_Store
 ._.DS_Store
 .vscode/*
-config.py
-content_management
+
 
 # pyenv
 .python-version
