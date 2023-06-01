@@ -19,10 +19,11 @@ This is a Flask project built using Flask framework and several additional libra
 1. Make sure you have Python 3.7 or higher installed (3.11.0 preferred)
 2. Clone this repository: `git clone https://github.com/majidm55/assignment-api.git`
 3. Navigate to the project directory: `cd assignment-api`
-4. Create a virtual environment (optional but recommended): `python3 -m venv /path/to/new/virtual/environment`
+4. Create a virtual environment (optional but recommended) for a custom path: `python3 -m venv /path/to/new/virtual/environment`
+   if you are in the right directory/project folder `python3 -m venv ./venv`
 5. Activate the virtual environment
 6. Install the required dependencies: `pip3 install -r requirements.txt`
-7. if you are running into issues with pip make sure you are using and
+7. If you are running into issues with pip make sure you are using and
   referencing the correct/consistent python and pip versions for env creation/installation (pip3 vs pip, python vs python3)
 7. To view the sqlite database and make edits, install the VS code extension named SQLite3 Editor v1.0.77
 
