@@ -22,15 +22,18 @@ This is a Flask project built using Flask framework and several additional libra
 4. Create a virtual environment (optional but recommended): `python -m venv /path/to/new/virtual/environment`
 5. Activate the virtual environment
 6. Install the required dependencies: `pip install -r requirements.txt`
+7. To view the sqlite database and make edits, install the VS code extension named SQLite3 Editor v1.0.77
 
 ## Configuration
 
-1. Open the `config.py` file and update the configuration settings according to your environment.
+1. Open the `config.py` file and update the configuration settings according to your environment
+2. The database resides within a sqlite3 file named content_management.db
+
 
 ## Usage
 
 1. Run the Flask application: `python app/assignment-api.py`
-2. Open your web browser and go to `http://localhost:8000` to access the API and Swagger documentation.
+2. Open your web browser and go to `http://localhost:8000` to access the API which will also print the database in an html format.
 
 ## Project Structure
 
@@ -38,5 +41,5 @@ This is a Flask project built using Flask framework and several additional libra
 - `config.py`: Configuration file for the application.
 - `controllers/`: Contains the API controllers which call the models.
 - `models/`: Contain the models which define data
-- `databases/`: References to adding data .
+- `databases/`: References to adding data which don't need to be run again.
 - `templates/`: Contains HTML templates to render locally.
