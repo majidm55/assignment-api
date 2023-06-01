@@ -19,8 +19,8 @@ This is a Flask project built using Flask framework and several additional libra
 1. Make sure you have Python 3.7 or higher installed (3.11.0 preferred)
 2. Clone this repository: `git clone https://github.com/majidm55/assignment-api.git`
 3. Navigate to the project directory: `cd assignment-api`
-4. Create a virtual environment (optional but recommended) for a custom path: `python3 -m venv /path/to/new/virtual/environment`
-   if you are in the right directory/project folder `python3 -m venv ./venv`
+4. Create a virtual environment (optional but recommended) for a custom path: `python3 -m venv /path/to/new/virtual/environment`.
+   If you are in the right directory/project folder `python3 -m venv ./venv`
 5. Activate the virtual environment
 6. Install the required dependencies: `pip3 install -r requirements.txt`
 7. If you are running into issues with pip make sure you are using and
